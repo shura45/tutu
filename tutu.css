@@ -1,6 +1,9 @@
 body {
     background-color: rgb(182, 170, 238);
 }
+.actions{
+    align-self: start;
+}
 
 .container {
     max-width: 500px;
@@ -50,6 +53,7 @@ body {
     height: 580px;
     overflow-y: scroll;
     margin: 20px auto;
+    font-size: 25px;
 }
 
 .reminder {
@@ -66,6 +70,7 @@ body {
     padding: 10px;
     display: -webkit-inline-box;
     box-shadow: rgba(0,0,0,0.15) 1.50px 1.50px 2px;
+    border-radius: 10px;
 }
 
 .text {
@@ -74,17 +79,19 @@ body {
 
 .btn-check {
     color: #fff;
-    background-color: rgb(55, 102, 255);
+    background-color: rgb(20, 33, 74);
     border: none;
     width: 70px;
     height: 35px;
+    border-radius: 10px;
 }
 
 .btn-delete {
     color: #fff;
-    background-color: red;
+    background-color: rgb(243, 88, 88);
     border: none;
     width: 60px;
     height: 35px;
     margin: 0 5px;
+    border-radius: 10px;
 }
