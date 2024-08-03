@@ -1,90 +1,166 @@
+/* General Body Styling */
 body {
-    background-color: rgb(182, 170, 238);
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f9f4; /* Light greenish background for a fresh look */
 }
 
+/* Main Container Styling */
 .container {
     max-width: 500px;
-    width: 100%;
+    width: 90%;
     margin: auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content area */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    position: relative; /* For stacking context */
+    margin-top: 20px; /* Space from top of the viewport */
 }
 
-.col {
-    height: 90vh;
-    background-color: #d8d6d6;
-    width: inherit;
-    border-radius: 40px;
-    
-}
-
+/* Title Section Styling */
 .title {
-    height: 300px;
-    background-color: rgb(12, 29, 82);
-    color: #fff;
-    padding: 0 20px 20px 20px;
-    border-radius: 20px;
+    background-color: #ff6f61; /* Coral pink color */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
 }
 
 .title h1 {
-    position: relative;
-    top: 140px;
-    font-size: 30pt;
+    margin: 0;
+    font-size: 28px;
 }
 
 .title button {
-    position: relative;
-    top: 70px;
-    left: 400px;
-    color:rgb(55, 102, 255);
-    background-color: #fff;
-    font-size: 20pt;
+    background-color: #ffffff;
+    color: #ff6f61;
     border: none;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    font-weight: bold;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.title button:hover {
+    background-color: #fce4ec; /* Light pink for hover */
+}
+
+/* Task List Styling */
 .list {
-    width: 450px;
-    height: 580px;
-    overflow-y: scroll;
-    margin: 20px auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .reminder {
-    width: 420px;
-    height: 50px;
-    border: 1px solid #fff;
-    color: #000;
-    background-color: #fff;
-    list-style: none;
-    line-height: 50px;
-    margin: 5px auto;
-    position: relative;
-    right: 20px;
-    padding: 10px;
-    display: -webkit-inline-box;
-    box-shadow: rgba(0,0,0,0.15) 1.50px 1.50px 2px;
+    background-color: #ffffff; /* White background for each reminder */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.text {
-    width: 280px;
+.reminder .text {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.btn-check, .btn-delete {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .btn-check {
-    color: #fff;
-    background-color: rgb(55, 102, 255);
-    border: none;
-    width: 70px;
-    height: 35px;
+    background-color: #4caf50; /* Green for check button */
 }
 
 .btn-delete {
-    color: #fff;
-    background-color: red;
+    background-color: #f44336; /* Red for delete button */
+}
+
+.btn-check:hover {
+    background-color: #388e3c; /* Darker green for hover */
+}
+
+.btn-delete:hover {
+    background-color: #d32f2f; /* Darker red for hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal input[type="text"], .modal input[type="time"], .modal button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal button {
+    background-color: #ff6f61; /* Coral pink color */
+    color: #ffffff;
+    cursor: pointer;
     border: none;
-    width: 60px;
-    height: 35px;
-    margin: 0 5px;
+    font-weight: bold;
+}
+
+.modal button:hover {
+    background-color: #e64a19; /* Darker pink for hover */
+}
+.gap-tick{
+    width: 20px;
+    height: 20px;
 }
